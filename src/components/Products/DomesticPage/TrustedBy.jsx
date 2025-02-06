@@ -6,16 +6,14 @@ import icon4 from "../../../assets/Domestic/partner4.png";
 import icon5 from "../../../assets/Domestic/partner5.png";
 import icon6 from "../../../assets/Domestic/partner6.webp";
 import icon7 from "../../../assets/Domestic/partner7.webp";
-import { Nav2 } from "./Nav2";  // Import Nav2
+
 
 export const TrustedBy = () => {
   const topimg = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
   // const middimg = [icon5, icon6, icon7];
 
   return (
-    <div className="max-w-full mx-8 mt-30 mb-12">
-      {/* Add Nav2 here */}
-      <Nav2 />  
+    <div className="max-w-full mx-8 mt-30 mb-12"> 
       
       <h1 className="xs:text-5xl sm:text-6xl mb-4">
         <span className="text-[#0B0757]">Trusted by </span>

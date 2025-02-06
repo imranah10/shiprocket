@@ -3,7 +3,7 @@ import bgimg from "../../../assets/Domestic/domesbg.webp";
 
 export const Hero = () => {
   return (
-    <div className="grid sm:grid-row md:grid-cols-2 items-center my-28">
+    <div className="grid sm:grid-row md:grid-cols-2 items-center px-8 my-28">
       <div>
         <h1 className=" text-5xl md:text-6xl lg:text-7xl font-semibold mb-12">
           <span>The </span>
