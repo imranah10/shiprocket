@@ -2,7 +2,7 @@ import React from "react";
 
 export const TopOffer = () => {
   return (
-    <div className="border border-2 hidden md:flex md:text-sm lg:text-base rounded-lg justify-center items-center gap-3 bg-gradient-to-r from-purple-400 via-purple-200 to-orange-200 py-1">
+    <div className="px-8 hidden md:flex md:text-sm lg:text-base rounded-lg justify-center items-center gap-3 bg-gradient-to-r from-purple-400 via-purple-200 to-orange-200 py-1">
       <div>
         <img
           className="w-8"
@@ -20,7 +20,7 @@ export const TopOffer = () => {
           Limited Period Offer On First Recharge
         </p>
       </div>
-      <div className="space-x-2 text-sm">
+      <div className="space-x-2 space-y-2 lg:space-y-0 text-sm">
         <button className="border-b-1 space-x-1 text-[#0B0757]">
           *T&C Apply.
         </button>

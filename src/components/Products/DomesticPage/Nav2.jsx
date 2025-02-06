@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+
 export const Nav2 = () => {
   const [scroll, setScroll] = useState(false);
   const [hideNavlinks, setHideNavlinks] = useState(false);
@@ -58,9 +59,9 @@ export const Nav2 = () => {
 
   return (
     <div
-      className={` flex justify-between gap-x-4 mt-5 transition-all duration-300 ${
+      className={`flex justify-between items-center gap-x-4 mt-5 transition-all duration-300 ${
         scroll
-          ? "fixed top-0 p-1 items-center w-[95.2%] bg-[#F9F7FB] rounded-full shadow-lg"
+          ? "fixed top-0 w-full xs:w-[84%] py-1 px-2 sm:w-[87%] md:w-[89%] lg:w-[93.2%] mx-auto bg-[#F9F7FB] rounded-full shadow-lg"
           : "-top-2 bg-transparent"
       }`}
     >
@@ -75,21 +76,33 @@ export const Nav2 = () => {
       </div>
 
       {/* Links (Horizontally Scrollable on Small Screens) */}
-      <div
+        <div className="flex">
+        <div
         ref={scrollRef}
         className={`flex overflow-x-auto items-center text-[#0B0757] lg:overflow-visible whitespace-nowrap scroll-smooth cursor-grab space-x-2 px-4 transition-opacity duration-300 ${
-          hideNavlinks ? "opacity-0" : "opacity-100"
+          hideNavlinks ? "opacity-0 md:opacity-100" : "opacity-100"
         }`}
       >
-        <Link className="shrink-0">Overview</Link>
-        <Link className="shrink-0">Same Day Delivery</Link>
-        <Link className="shrink-0">Doorstep Delivery</Link>
-        <Link className="shrink-0">Shipping Rate Calculator</Link>
-        <Link className="shrink-0">Blog</Link>
-        <Link className="shrink-0 bg-purple-500 text-white px-2 py-2 rounded-lg">
-          Start Shipping Now
-        </Link>
+        {!hideNavlinks && (
+          <>
+            <Link className="shrink-0 md:block hidden">Overview</Link>
+            <Link className="shrink-0 md:block hidden">Same Day Delivery</Link>
+            <Link className="shrink-0 md:block hidden">Doorstep Delivery</Link>
+            <Link className="shrink-0 md:block hidden">Shipping Rate Calculator</Link>
+            <Link className="shrink-0 md:block hidden">Blog</Link>
+          </>
+        )}
       </div>
+
+      {/* Start Shipping Now Button */}
+      <div>
+      <Link
+        className={`shrink-0 bg-purple-500 text-white px-2 py-2 rounded-lg `}
+      >
+        Start Shipping Now
+      </Link>
+      </div>
+        </div>
     </div>
   );
 };

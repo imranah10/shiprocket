@@ -6,14 +6,18 @@ import icon4 from "../../../assets/Domestic/partner4.png";
 import icon5 from "../../../assets/Domestic/partner5.png";
 import icon6 from "../../../assets/Domestic/partner6.webp";
 import icon7 from "../../../assets/Domestic/partner7.webp";
+import { Nav2 } from "./Nav2";  // Import Nav2
 
 export const TrustedBy = () => {
   const topimg = [icon1, icon2, icon3, icon4, icon5, icon6, icon7];
   // const middimg = [icon5, icon6, icon7];
 
   return (
-    <div className="max-w-full mx-8 mt-30 mb-12  ">
-      <h1 className="text-5xl mb-4">
+    <div className="max-w-full mx-8 mt-30 mb-12">
+      {/* Add Nav2 here */}
+      <Nav2 />  
+      
+      <h1 className="xs:text-5xl sm:text-6xl mb-4">
         <span className="text-[#0B0757]">Trusted by </span>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-purple-300 via-green-400 to-purple-900">
           250000+
@@ -23,7 +27,7 @@ export const TrustedBy = () => {
 
       <div className="bg-[#F6F4FD]">
         {/* slider box */}
-        <div className="flex flex-col  items-center gap-2.5 overflow-hidden  px-8">
+        <div className="flex flex-col items-center gap-2.5 overflow-hidden xs:p-3 md:px-8 py-5">
           {/* topimg */}
           <div className="flex justify-between items-center w-full ">
             {topimg.concat(topimg).map((Img, i) => (
@@ -31,7 +35,7 @@ export const TrustedBy = () => {
                 key={i}
                 src={Img}
                 alt="partner"
-                className={`w-50 h-40 animate-slideleft ${
+                className={`xs:w-40 xs:h-40 sm:w-55 sm:h-55 md:w-50 md:h-40 animate-slideleft ${
                   i % 2 === 0 ? "mt-16" : ""
                 }`}
               />

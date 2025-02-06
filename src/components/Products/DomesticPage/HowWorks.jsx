@@ -6,10 +6,10 @@ export const HowWorks = () => {
   return (
     <>
       <div className="max-w-full mx-8 pt-6 mt-10">
-        <div className="flex justify-between items-center">
+        <div className=" flex-row space-y-5  lg:flex justify-between items-center">
           <div className="space-y-2">
             <h1 className="text-6xl text-[#0B0757]">How it works</h1>
-            <p className="text-xl text-gray-500 font-Manrope">
+            <p className="md:text-xl text-gray-500 font-Manrope">
               Shiprocket simplifies online shipping right from shipment creation
               to <br />
               delivery, providing real-time tracking updates at every stage

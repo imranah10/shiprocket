@@ -53,28 +53,35 @@ const data = [
   },
 ];
 
-const videoURL = "https://www.youtube.com/embed/F2RnxZnubCM";
+const videoURL = "https://www.youtube.com/watch?v=sMKsLR-m7PA";
 
 const Card = ({ img, desc }) => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="bg-[#6A54CB] h-[360px] p-6 rounded-xl shadow-lg flex justify-between items-center relative">
+    <div className="bg-[#6A54CB] sm:h-[300px] md:h-[360px] p-8 rounded-xl shadow-lg 
+    flex xs:flex-col md:flex-row xs:items-center xs:text-center justify-between items-center relative">
+      
       <div className="space-y-4">
-        <img className="w-40 object-contain" src={img} alt="img" />
-        <h1 className="text-5xl font-semibold text-white">{desc}</h1>
+      
+        <img className="w-40 object-contain xs:block xs:mx-auto sm:mx-auto md:mx-0" src={img} alt="img" />
+        <h1 className="xs:text-3xl lg:text-4xl font-semibold text-white">
+          {desc}
+        </h1>
       </div>
 
-      <div className="mr-40">
+      <div className="sm:mr-0 md:mr-20 lg:mr-44 xs:self-center">
         <button
           onClick={() => setShowVideo(true)}
-          className="w-24 h-24 flex items-center justify-center text-white bg-gradient-to-r from-orange-300 via-pink-400 to-purple-400 rounded-full mt-4 transition-transform duration-300 hover:scale-110"
+          className="xs:w-16 xs:h-16 md:w-24 md:h-24 flex items-center justify-center text-white 
+          bg-gradient-to-r from-orange-300 via-pink-400 to-purple-400 rounded-full mt-4 
+          transition-transform duration-300 hover:scale-110"
         >
-          <IoIosArrowDropright className="w-20 h-20" />
+          <IoIosArrowDropright className="xs:w-14 xs:h-14 md:w-20 md:h-20" />
         </button>
       </div>
 
-      {/* Video Modal ( Transparent) */}
+      {/* Video Modal */}
       {showVideo && (
         <div
           className="fixed inset-0 flex justify-center items-center z-50"
@@ -85,13 +92,11 @@ const Card = ({ img, desc }) => {
             onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
           >
             <iframe
-              width="700"
-              height="600"
+              className="rounded-lg shadow-xl sm:w-[350px] sm:h-[450px] md:w-[400px] md:h-[500px] lg:w-[700px] lg:h-[600px]"
               src={videoURL}
               title="YouTube video"
               frameBorder="0"
               allowFullScreen
-              className="rounded-lg shadow-xl"
             ></iframe>
           </div>
         </div>
