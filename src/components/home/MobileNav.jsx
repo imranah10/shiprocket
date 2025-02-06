@@ -57,6 +57,10 @@ function MobileNav() {
         <div className="fixed top-24 w-fit mx-auto h-fit inset-0 bg-white shadow-lg p-6 flex flex-col gap-4 z-50 rounded-lg">
           <ul className="flex flex-col gap-4">
             <li className="flex items-center justify-between">
+            <Link to="/products">products</Link>
+              <FaChevronRight />
+            </li>
+            <li className="flex items-center justify-between">
               <button>Platform</button>
               <FaChevronRight />
             </li>
