@@ -176,7 +176,7 @@ const Footer = () => {
 
               <ul
                 className={`overflow-hidden transition-all duration-300 ${
-                  openSections[section.title] ? "max-h-40 " : "max-h-0"
+                  openSections[section.title] ? "max-h-40" : "max-h-0"
                 } md:max-h-full md:block`}
               >
                 {section.items.map((item, idx) => (
