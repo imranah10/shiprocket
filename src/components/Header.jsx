@@ -53,7 +53,7 @@ function Header() {
   return (
     <motion.nav
       className={` p-4 w-full justify-between items-center relative hidden md:flex ${
-        routeStatus ? "border-b-2 border-dashed border-zinc-200 bg-transparent" : ""
+        routeStatus ? "border-b-2   border-dashed border-zinc-200 bg-transparent" : ""
       } ${
         showFixedHeader
           ? "bg-[#ffffffa5] backdrop-blur-xs sticky top-2 py-3 p-4 w-14/15 rounded-full shadow-lg items-center z-30"
